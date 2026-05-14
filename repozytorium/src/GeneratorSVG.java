@@ -10,6 +10,7 @@ public class GeneratorSVG {
         this.wysokosc = wysokosc;
     }
 
+    // Tę metodę będziesz wołać w pętli w Main
     public void dodaj(String tagSvg) {
         this.zawartosc += "\t" + tagSvg + "\n";
     }
@@ -21,8 +22,9 @@ public class GeneratorSVG {
             writer.write(zawartosc);
             writer.write("</svg>");
             writer.close();
+            System.out.println("Zapisano SVG do: " + sciezka);
         } catch (Exception e) {
-            System.out.println("Blad zapisu SVG");
+            System.out.println("Błąd zapisu pliku!");
         }
     }
 }
